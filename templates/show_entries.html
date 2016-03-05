@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class=entries>
+  {% for entry in entries %}
+    <li><h2><a href="{{ entry.url}}" target="_blank"> {{ entry.title }}</a></h2>
+      {{ entry.published_date}}<br>
+      {{ entry.short_intro}}
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
